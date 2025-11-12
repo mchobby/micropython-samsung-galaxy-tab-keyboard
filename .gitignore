@@ -1,0 +1,18 @@
+# Tools
+
+pushgit.sh
+makezip.sh
+UNO-R3-Pyboard-mapping.png
+install_pico.sh
+blink.py
+
+# ignore gimp / Fritzing files
+*.xcf
+*.fzz
+*.svg
+
+# Ignorer les fichier python compilé
+*.pyc
+
+# Livre office source document
+*.ods
