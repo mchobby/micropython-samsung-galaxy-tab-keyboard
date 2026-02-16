@@ -1,4 +1,6 @@
-# === tester2.py ===
+# === board_test2.py ===
+# Version of tester2.py adapted to the capture board.
+#
 # Activate each of the 26 pins (one by one) and try to read which of the 
 # 25 remaining pins gets activated by a Key-Press.
 #
@@ -9,19 +11,19 @@
 # ONLY the combination with the lower value at the first position will be
 # retained.
 #
-# The results are then encoded within the scan-result.ods spreadsheet.
+# The results should be identical to primilarly test stored into scan-result.ods
 #
 from machine import Pin, I2C
 from mcp230xx import MCP23017
 import time
-i2c = I2C(1,  sda=Pin(6), scl=Pin(7) )
+i2c = I2C(1, sda=Pin(6), scl=Pin(7) )
 
 def pretty_bin8( value ):
  return ('%08s'% bin(value).replace('0b','')).replace(' ','0')
 
 class KBReader2:
  def __init__(self):
-  self.mcps = [ MCP23017( i2c, 0x20 ), MCP23017( i2c, 0x21 ) ] 
+  self.mcps = [ MCP23017( i2c, 0x24 ), MCP23017( i2c, 0x20 ) ]
   # Set all the pins in input mode 
   for mcp in self.mcps:
    for i in range(16):

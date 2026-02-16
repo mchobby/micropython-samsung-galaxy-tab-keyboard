@@ -16,3 +16,14 @@ blink.py
 
 # Livre office source document
 *.ods
+
+# Kicad source file
+*.gbr
+*.drl
+*cache.lib
+*.kicad_pcb*
+*.net
+*.pro
+*.sch*
+*.gbrjob
+fp-info-cache
